@@ -1,0 +1,46 @@
+{
+  "name": "api2-gelbooru",
+  "version": "1.0.1",
+  "description": "Api gelbooru gravityfalls.booru.org (TypeScript)",
+  "author": "Sex Hentai <fapingalot@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm-fapingalot/api2-gelbooru.git"
+  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "jest -c jest.config.js",
+    "test:unit": "jest -c jest.config.unit.js",
+    "test:integration": "jest -c jest.config.integration.js",
+    "test:watch": "npm run test -- --watchAll",
+    "test:unit:watch": "npm run test:unit -- --watchAll",
+    "test:integration:watch": "npm run test:integration -- --watchAll",
+    "coverage": "npm run test -- --coverage",
+    "coverage:unit": "npm run test:unit -- --coverage",
+    "coverage:integration": "npm run test:integration -- --coverage",
+    "lint": "tslint --project tslint.json",
+    "build": "tsc",
+    "clean": "rm -rf build coverage",
+    "doc": "typedoc"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.15",
+    "@types/jest": "^24.0.24",
+    "@types/node-fetch": "^2.5.4",
+    "hygen": "^5.0.3",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "typedoc": "^0.15.5",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
+  }
+}
